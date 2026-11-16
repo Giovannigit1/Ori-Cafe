@@ -106,6 +106,29 @@ Para simular la experiencia real detrás de la barra:
 
 ---
 
+## 🌐 Despliegue en Netlify
+
+El proyecto ya cuenta con `netlify.toml` y `public/_redirects` configurados para compilar y servir la aplicación de forma 100% funcional.
+
+### Opción A: Desde GitHub (Recomendado)
+1. Sube este repositorio a tu cuenta de GitHub.
+2. En [Netlify](https://app.netlify.com), haz clic en **"Add new site"** → **"Import an existing project"** y selecciona tu repositorio.
+3. Netlify detectará automáticamente:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+4. Pulsa **"Deploy site"** y estará en línea en segundos.
+
+### Opción B: Con Netlify CLI
+```bash
+# Compilar producción
+npm run build
+
+# Desplegar
+npx netlify deploy --prod --dir=dist
+```
+
+---
+
 ## 📦 Compilación y Despliegue en Firebase Hosting
 
 ### 1. Compilar para Producción
