@@ -1,0 +1,109 @@
+:root {
+  /* ══════════════════════════════════════════════
+     PALETA DE CAFETERÍA DE ESPECIALIDAD (MODO CLARO)
+     Inspirado en cuadernos de cata, papel sin blanquear y cobre tostado
+     ══════════════════════════════════════════════ */
+  --bg-principal: #FAF8F5;
+  --bg-superficie: #FFFFFF;
+  --bg-superficie-elevada: #FFFFFF;
+  --bg-superficie-suave: #F4EFEA;
+  --bg-tarjeta-subtil: #F9F6F1;
+  
+  --texto-principal: #1A1412;
+  --texto-secundario: #4E4038;
+  --texto-suave: #7D6E65;
+  --texto-faint: #A69990;
+  
+  /* Acento: Cobre y Avellana Artesanal */
+  --acento: #B46522;
+  --acento-hover: #985117;
+  --acento-claro: #FDF7F0;
+  --acento-borde: #E7CFB7;
+  --acento-fuerte: #854311;
+
+  /* Verde Salvia / Eucalipto (Leches Vegetales y Éxito) */
+  --verde: #3E6B34;
+  --verde-hover: #325829;
+  --verde-claro: #F1F6EF;
+  --verde-borde: #C4DEC0;
+
+  /* Terracota / Ladrillo Cálido (Advertencias y Ojo) */
+  --rojo: #A83C2E;
+  --rojo-hover: #8F2F23;
+  --rojo-claro: #FAF1EF;
+  --rojo-borde: #E8C3BD;
+
+  /* Ámbar / Calibración */
+  --ambar: #C07918;
+  --ambar-claro: #FCF5EB;
+  --ambar-borde: #EED7B8;
+
+  /* Líneas finas y estructuras de laboratorio */
+  --borde: #EAE3D9;
+  --borde-fuerte: #D4C9BC;
+  --borde-suave: rgba(26, 20, 18, 0.07);
+
+  /* Sombras táctiles limpias, no flotantes tipo SaaS */
+  --sombra-sm: 0 1px 3px rgba(26, 20, 18, 0.04);
+  --sombra-md: 0 4px 12px rgba(26, 20, 18, 0.06);
+  --sombra-lg: 0 12px 28px rgba(26, 20, 18, 0.08);
+
+  /* Tipografías editoriales */
+  --fuente-titulos: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fuente-editorial: 'Newsreader', Georgia, serif;
+  --fuente-texto: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fuente-mono: 'Space Mono', monospace, monospace;
+
+  /* Ergonomía táctil */
+  --radio-pildora: 9999px;
+  --radio-tarjeta: 14px;
+  --radio-sm: 8px;
+  --altura-min-tactil: 46px;
+  --ancho-max-contenedor: 760px;
+  
+  --transicion-rapida: 0.15s cubic-bezier(0.2, 0, 0, 1);
+  --transicion-suave: 0.25s cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-principal: #130F0D;
+    --bg-superficie: #1C1613;
+    --bg-superficie-elevada: #231C18;
+    --bg-superficie-suave: #271F1A;
+    --bg-tarjeta-subtil: #1F1916;
+
+    --texto-principal: #F4EDE6;
+    --texto-secundario: #CDC0B4;
+    --texto-suave: #9A8B80;
+    --texto-faint: #6A5D54;
+
+    --acento: #DE9B52;
+    --acento-hover: #ECAD69;
+    --acento-claro: #2F2013;
+    --acento-borde: #54391F;
+    --acento-fuerte: #F3BC7D;
+
+    --verde: #6CA554;
+    --verde-hover: #80BC66;
+    --verde-claro: #1A2816;
+    --verde-borde: #35502A;
+
+    --rojo: #CF5646;
+    --rojo-hover: #DF6C5D;
+    --rojo-claro: #331A16;
+    --rojo-borde: #632B23;
+
+    --ambar: #E59F38;
+    --ambar-claro: #312210;
+    --ambar-borde: #61431D;
+
+    --borde: #2E241E;
+    --borde-fuerte: #48392F;
+    --borde-suave: rgba(244, 237, 230, 0.08);
+
+    --sombra-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --sombra-md: 0 4px 14px rgba(0, 0, 0, 0.5);
+    --sombra-lg: 0 12px 32px rgba(0, 0, 0, 0.65);
+  }
+}

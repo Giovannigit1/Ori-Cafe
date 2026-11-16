@@ -1,0 +1,987 @@
+{
+  "version": "1.0.0",
+  "tituloSitio": "Ori Café",
+  "lema": "Cada taza igual, cada cliente bien atendido.",
+  "subtitulo": "Guía de capacitación práctica para el equipo de barra en Santiago de Chile.",
+  "horariosCalibracionPredeterminados": [
+    { "id": "apertura", "nombre": "Apertura", "hora": "08:30" },
+    { "id": "mediodia", "nombre": "Mediodía", "hora": "12:30" },
+    { "id": "tarde", "nombre": "Tarde", "hora": "16:30" }
+  ],
+  "modulos": [
+    {
+      "id": "cappuccino",
+      "orden": 1,
+      "tipo": "ficha_tecnica",
+      "titulo": "Cappuccino",
+      "descripcionCorta": "Ficha técnica estandarizada para que el cappuccino quede igual, lo prepare quien lo prepare.",
+      "parametros": {
+        "dosisGramos": 18,
+        "rendimientoGramos": 21,
+        "tiempoSegundos": 25,
+        "ratio": "1:1,17",
+        "temperaturaLeche": "60 °C",
+        "volumenLeche": "180 ml",
+        "pitcher": "350 ml (el latte lleva más: 240 ml)",
+        "notaDiferencia": "18 g es el café molido en el portafiltro; 21 g es el espresso líquido que cae en la taza."
+      },
+      "controlCalidad": {
+        "espresso": "Crema avellana y uniforme, sin manchas blancas ni canalizaciones.",
+        "leche": "Microespuma brillante y sedosa, entre 60 °C y 65 °C, sin burbujas visibles."
+      },
+      "pasos": [
+        {
+          "id": "cap-p1",
+          "orden": 1,
+          "titulo": "Moler, distribuir y compactar",
+          "descripcion": "Muele exactamente 18 g de café en el portafiltro. Pesa en la balanza para asegurar la dosis.",
+          "consejo": "Pesa 18 g de café molido; distribuye parejo antes de compactar para que el agua pase uniforme por toda la pastilla sin formar canales."
+        },
+        {
+          "id": "cap-p2",
+          "orden": 2,
+          "titulo": "Extraer el espresso en 25 segundos",
+          "descripcion": "Extrae el espresso directamente sobre la balanza: deben caer exactamente 21 g de espresso en la taza en 25 segundos.",
+          "consejo": "Pon la taza sobre la balanza y tara a cero. Desde que presionas el botón la extracción dura 25 s y cortas en 21 g.",
+          "enlaceTexto": "¿Sabe agrio, amargo o no sale en el tiempo? Ver diagnóstico de calibración",
+          "enlaceDestino": "#/modulo/calibracion-espresso"
+        },
+        {
+          "id": "cap-p3",
+          "orden": 3,
+          "titulo": "Texturizar 180 ml de leche",
+          "descripcion": "Texturiza 180 ml de leche entera en pitcher de 350 ml hasta alcanzar 60 °C.",
+          "consejo": "Primero incorpora aire con la punta apenas bajo la superficie (sonido 'chss') y luego sumérgela 1 cm para que la leche gire como remolino.",
+          "enlaceTexto": "¿Leche descremada, sin lactosa o vegetal? Ver cómo texturizar cada una",
+          "enlaceDestino": "#/modulo/texturizado-leche"
+        },
+        {
+          "id": "cap-p4",
+          "orden": 4,
+          "titulo": "Integrar, verter y servir",
+          "descripcion": "Golpea suavemente la base del pitcher sobre el mesón y gíralo con movimientos circulares para integrar la microespuma antes de verter sobre el espresso.",
+          "consejo": "Vierte con flujo continuo y sirve de inmediato para que la crema y la espuma conserven su brillo y temperatura."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "cap-q1",
+          "pregunta": "¿Cuántos gramos de café molido lleva el portafiltro para un cappuccino?",
+          "opciones": ["14 g", "18 g", "21 g", "25 g"],
+          "indiceCorrecto": 1,
+          "explicacion": "La dosis estándar en Ori Café es siempre 18 g de café molido en el portafiltro."
+        },
+        {
+          "id": "cap-q2",
+          "pregunta": "En la ficha técnica dice 21 g. ¿A qué corresponde exactamente?",
+          "opciones": [
+            "Al café molido puesto en el portafiltro",
+            "Al espresso líquido que cae en la taza",
+            "A la cantidad de leche que se vierte",
+            "Al agua caliente de purga"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "21 g es el rendimiento en taza (líquido extraído), nunca lo confundas con los 18 g de café seco."
+        },
+        {
+          "id": "cap-q3",
+          "pregunta": "¿Hasta qué nivel se llena el pitcher de 350 ml para el cappuccino?",
+          "opciones": ["Hasta el borde", "250 ml", "180 ml", "100 ml"],
+          "indiceCorrecto": 2,
+          "explicacion": "Se llena con 180 ml de leche, dejando espacio suficiente para que la leche crezca y gire."
+        },
+        {
+          "id": "cap-q4",
+          "pregunta": "¿En cuánto tiempo deben caer los 21 g de espresso en la taza?",
+          "opciones": ["15 s", "25 s", "40 s", "60 s"],
+          "indiceCorrecto": 1,
+          "explicacion": "El tiempo estándar de extracción son 25 segundos (rango óptimo entre 23 y 28 s)."
+        },
+        {
+          "id": "cap-q5",
+          "pregunta": "¿Cómo debe verse la leche bien texturizada para servir?",
+          "opciones": [
+            "Con burbujas grandes y espuma alta",
+            "Completamente líquida sin nada de espuma",
+            "Microespuma brillante como pintura fresca",
+            "Espuma seca y firme que se separa del líquido"
+          ],
+          "indiceCorrecto": 2,
+          "explicacion": "Buscamos una microespuma elástica, sedosa y brillante, sin burbujas visibles."
+        }
+      ]
+    },
+    {
+      "id": "latte",
+      "orden": 2,
+      "tipo": "ficha_tecnica",
+      "titulo": "Latte",
+      "descripcionCorta": "Lleva más leche que el cappuccino (240 ml contra 180 ml) y menos espuma, con una capa fina y sedosa.",
+      "parametros": {
+        "dosisGramos": 18,
+        "rendimientoGramos": 21,
+        "tiempoSegundos": 25,
+        "taza": "300 ml",
+        "volumenLeche": "240 ml (más que el cappuccino)",
+        "pitcher": "600 ml, hasta justo bajo el pico",
+        "temperaturaLeche": "60–65 °C (vegetales 55–60 °C)",
+        "espuma": "1 cm (el cappuccino lleva 1,5 a 2 cm)",
+        "notaDiferencia": "18 g café molido en portafiltro → 21 g espresso en taza. Misma extracción que el cappuccino."
+      },
+      "controlCalidad": {
+        "espresso": "Crema avellana y uniforme en taza de 300 ml previamente calentada.",
+        "leche": "Microespuma brillante sin burbujas, temperatura entre 60 y 65 °C.",
+        "espuma": "Capa fina y pareja de 1 cm (más delgada que el cappuccino).",
+        "taza": "Llena hasta el borde, sin derrames ni gotas en los bordes."
+      },
+      "pasos": [
+        {
+          "id": "lat-p1",
+          "orden": 1,
+          "titulo": "Moler, distribuir y compactar",
+          "descripcion": "Muele 18 g de café, distribuye uniformemente y compacta a nivel.",
+          "consejo": "Usa el mismo molino ya calibrado que para el cappuccino. Mismo punto de molienda y dosis."
+        },
+        {
+          "id": "lat-p2",
+          "orden": 2,
+          "titulo": "Extraer el espresso en la taza de 300 ml",
+          "descripcion": "Extrae el espresso directamente en la taza de 300 ml: deben caer 21 g en 25 segundos.",
+          "consejo": "Calienta antes la taza con agua caliente del grupo y sécala bien; pon la taza sobre la balanza y corta justo en 21 g."
+        },
+        {
+          "id": "lat-p3",
+          "orden": 3,
+          "titulo": "Texturizar 240 ml de leche con poco aire",
+          "descripcion": "Texturiza 240 ml de leche en pitcher de 600 ml hasta 60–65 °C con muy poco aire.",
+          "consejo": "Airea solo 2 a 3 segundos con 'chss' suave y luego sumerge la punta para que gire. Son 240 ml (más que el cappuccino) con espuma fina de 1 cm.",
+          "enlaceTexto": "¿Dudas con la leche vegetal o descremada? Ver selector de leches",
+          "enlaceDestino": "#/modulo/texturizado-leche"
+        },
+        {
+          "id": "lat-p4",
+          "orden": 4,
+          "titulo": "Golpear y girar el pitcher",
+          "descripcion": "Da un golpe suave contra la barra para romper cualquier burbuja superficial y gira el pitcher.",
+          "consejo": "Haz girar la leche en círculos hasta que la superficie brille como pintura fresca líquida."
+        },
+        {
+          "id": "lat-p5",
+          "orden": 5,
+          "titulo": "Verter y servir con arte latte",
+          "descripcion": "Vierte desde unos 10 cm de alto para integrar con el espresso; a 3/4 de taza acerca el pico a la superficie.",
+          "consejo": "Al acercar el pitcher a la superficie, la microespuma blanca flotará: termina con un corazón o una hoja limpia."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "lat-q1",
+          "pregunta": "¿Cuántos gramos de café molido van en el portafiltro para el latte?",
+          "opciones": ["21 g", "18 g", "25 g", "12 g"],
+          "indiceCorrecto": 1,
+          "explicacion": "Siempre son 18 g de café molido en el portafiltro, igual que en el cappuccino."
+        },
+        {
+          "id": "lat-q2",
+          "pregunta": "¿Cuál es la diferencia principal del latte con el cappuccino?",
+          "opciones": [
+            "Lleva más café molido",
+            "Lleva más leche (240 ml vs 180 ml) y menos espuma (1 cm)",
+            "Se prepara con leche fría",
+            "Lleva menos leche y una espuma mucho más gruesa"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "El latte tiene más leche (240 ml) y una capa de espuma más delgada (1 cm) frente a los 180 ml y 1,5–2 cm del cappuccino."
+        },
+        {
+          "id": "lat-q3",
+          "pregunta": "¿Cuánto tiempo se airea la leche al vaporizar para un latte?",
+          "opciones": ["Solo 2 a 3 segundos", "8 a 10 segundos", "Todo el tiempo de vaporizado", "No se airea nada"],
+          "indiceCorrecto": 0,
+          "explicacion": "Solo 2 a 3 segundos de aireado para lograr una textura sedosa con apenas 1 cm de microespuma."
+        },
+        {
+          "id": "lat-q4",
+          "pregunta": "¿Qué grosor aproximado debe tener la espuma en un latte?",
+          "opciones": ["Nada de espuma", "1 cm", "3 cm", "Media taza"],
+          "indiceCorrecto": 1,
+          "explicacion": "Una capa fina y elástica de 1 cm es la firma del latte clásico."
+        },
+        {
+          "id": "lat-q5",
+          "pregunta": "¿Por qué es importante precalentar la taza de 300 ml antes de extraer el espresso?",
+          "opciones": [
+            "Solo para que se vea bonita",
+            "Para que la bebida no se enfríe de golpe y la crema del espresso no se opaque",
+            "Para desinfectarla con vapor",
+            "No es necesario precalentarla"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "Una taza fría enfría el espresso instantáneamente y destruye los aromas y la elasticidad de la crema."
+        }
+      ]
+    },
+    {
+      "id": "texturizado-leche",
+      "orden": 3,
+      "tipo": "tecnica_selector",
+      "titulo": "Texturizado de leche",
+      "descripcionCorta": "Domina las dos fases del vaporizado, el control de temperatura y las diferencias entre leche de vaca y leches vegetales.",
+      "introduccionDestacada": "Texturizar la leche es hacer dos cosas, una después de la otra: primero se le mete aire para formar la espuma y después se hace girar para que se caliente y quede sedosa.",
+      "pasos": [
+        {
+          "id": "tex-p1",
+          "orden": 1,
+          "titulo": "Preparar la leche fría y el pitcher limpio",
+          "descripcion": "Usa leche recién sacada del refrigerador (~4 °C) y un pitcher limpio y frío. Llena según la ficha de la bebida, nunca superes la base del pico.",
+          "consejo": "Si vas a usar leche vegetal, agita vigorosamente el envase antes de servir en el pitcher para redistribuir los aceites y proteínas.",
+          "mostrarTermometro": true
+        },
+        {
+          "id": "tex-p2",
+          "orden": 2,
+          "titulo": "Purgar la lanceta de vapor",
+          "descripcion": "Abre el vapor 1 a 2 segundos dirigiendo la punta hacia un paño húmedo exclusivo de barra.",
+          "consejo": "Esto expulsa el agua condensada dentro de la lanceta para que no diluya la leche."
+        },
+        {
+          "id": "tex-p3",
+          "orden": 3,
+          "titulo": "Posicionar la lanceta con precisión",
+          "descripcion": "Ubica la punta apenas bajo la superficie de la leche, ligeramente hacia un costado del centro, con el pitcher inclinado unos 15 grados.",
+          "consejo": "Abre la perilla o palanca de vapor al máximo de golpe, sin titubear."
+        },
+        {
+          "id": "tex-p4",
+          "orden": 4,
+          "titulo": "Fase 1: Airear ('Hace la espuma')",
+          "descripcion": "Mantén la punta en la superficie escuchando un 'chss' suave y parejo, como papel que se rasga. El tiempo exacto depende del tipo de leche y la bebida.",
+          "consejo": "Airea solo en los primeros segundos mientras la leche aún está fría (menos de 37 °C). Consulta la ficha de cada leche abajo.",
+          "mostrarSelectorLeche": true
+        },
+        {
+          "id": "tex-p5",
+          "orden": 5,
+          "titulo": "Fase 2: Integrar ('Calienta y deja sedosa')",
+          "descripcion": "Sumerge la punta aproximadamente 1 cm más profundo. La leche debe girar en un remolino circular continuo sin salpicar.",
+          "consejo": "Apoya la mano en la base del pitcher. Cuando la base esté caliente y casi no aguantes tocarla, estás en ~60 °C. Cierra el vapor antes de retirar la lanceta."
+        },
+        {
+          "id": "tex-p6",
+          "orden": 6,
+          "titulo": "Limpiar y purgar la lanceta al tiro",
+          "descripcion": "Apenas cierres el vapor y retires el pitcher, limpia la lanceta con el paño húmedo y purga 1 segundo.",
+          "consejo": "Hazlo al tiro (de inmediato). La leche se seca en segundos y quemada obstruye los orificios de la lanceta."
+        },
+        {
+          "id": "tex-p7",
+          "orden": 7,
+          "titulo": "Golpear, girar y verter antes de 30 segundos",
+          "descripcion": "Da un golpe suave en la barra, gira el pitcher para integrar el brillo y vierte antes de 30 segundos.",
+          "consejo": "Si dejas reposar la leche más de 30 segundos, la espuma se separará del líquido y perderás la textura sedosa."
+        }
+      ],
+      "leches": [
+        {
+          "id": "entera",
+          "nombre": "Leche Entera",
+          "grupo": "vaca",
+          "temperatura": "60–65 °C",
+          "tiempoLatte": "2–3 s",
+          "tiempoCappuccino": "4–6 s",
+          "barraAireado": 5,
+          "calidadEspuma": 5,
+          "textura": "Densa, brillante y sedosa; es la referencia dorada de la barra.",
+          "como": "La más fácil y amigable de texturizar. Si la técnica sale bien con esta, la base está perfecta.",
+          "ojo": "Sobre 70 °C pierde dulzor natural y toma sabor y olor a leche cocida o quemada."
+        },
+        {
+          "id": "descremada",
+          "nombre": "Leche Descremada",
+          "grupo": "vaca",
+          "temperatura": "60–65 °C",
+          "tiempoLatte": "1–2 s",
+          "tiempoCappuccino": "3–4 s",
+          "barraAireado": 3,
+          "calidadEspuma": 3,
+          "textura": "Genera mucha espuma pero seca y liviana, con burbujas más grandes.",
+          "como": "Airea menos tiempo porque crece muy rápido; integra con remolino fuerte y vierte de inmediato.",
+          "ojo": "Con mucho aire queda una espuma tiesa tipo merengue que no se mezcla con el espresso."
+        },
+        {
+          "id": "sin-lactosa",
+          "nombre": "Leche Sin Lactosa",
+          "grupo": "vaca",
+          "temperatura": "55–60 °C",
+          "tiempoLatte": "2–3 s",
+          "tiempoCappuccino": "4–6 s",
+          "barraAireado": 5,
+          "calidadEspuma": 5,
+          "textura": "Muy parecida a la entera en brillo y cuerpo, perceptiblemente más dulce.",
+          "como": "Sus azúcares libres (glucosa y galactosa) caramelizan antes: caliéntala a 55–60 °C. Usa pitcher limpio y lanceta purgada.",
+          "ojo": "Sin lactosa NO es sin leche: contiene proteína animal de vaca. A clientes con alergia a la proteína de vaca (APLV), ofréceles vegetal."
+        },
+        {
+          "id": "avena",
+          "nombre": "Bebida de Avena",
+          "grupo": "vegetal",
+          "temperatura": "55–60 °C",
+          "tiempoLatte": "2–3 s",
+          "tiempoCappuccino": "3–4 s",
+          "barraAireado": 4,
+          "calidadEspuma": 4,
+          "textura": "Estable y sedosa, la más parecida a la leche entera, con dulzor cereal suave.",
+          "como": "Agita muy bien el envase. Usa siempre versión Barista (Orasi Barista o Nude Barista). Es la mejor vegetal para arte latte.",
+          "ojo": "Sobre 60 °C los almidones se gelatinizan: se pone pastosa y adquiere sabor a avena cocida."
+        },
+        {
+          "id": "soya",
+          "nombre": "Bebida de Soya",
+          "grupo": "vegetal",
+          "temperatura": "55–60 °C",
+          "tiempoLatte": "2 s",
+          "tiempoCappuccino": "3 s",
+          "barraAireado": 3,
+          "calidadEspuma": 3,
+          "textura": "Buena espuma y cuerpo medio gracias a su alto contenido de proteína vegetal.",
+          "como": "Usa versión Barista. Airea poco y solo al comienzo porque la proteína monta velozmente; vierte apenas termines.",
+          "ojo": "Si se calienta sobre 60 °C o el espresso es muy ácido, la proteína se corta formando grumitos. Si pasa, descarta y prepara de nuevo."
+        },
+        {
+          "id": "almendra",
+          "nombre": "Bebida de Almendra",
+          "grupo": "vegetal",
+          "temperatura": "55–60 °C",
+          "tiempoLatte": "1–2 s",
+          "tiempoCappuccino": "1–2 s",
+          "barraAireado": 2,
+          "calidadEspuma": 2,
+          "textura": "Espuma liviana y delicada, con notas sutiles a frutos secos tostados.",
+          "como": "Usa Orasi Barista Almendra. Airea muy poco (1 a 2 s), integra rápido y vierte sin demora. Ideal para figuras sencillas como corazón.",
+          "ojo": "La leche de almendra tradicional de supermercado (no barista) no sirve para arte latte: se separa y se disuelve en segundos."
+        },
+        {
+          "id": "coco",
+          "nombre": "Bebida de Coco",
+          "grupo": "vegetal",
+          "temperatura": "55–60 °C",
+          "tiempoLatte": "1–2 s",
+          "tiempoCappuccino": "1–2 s",
+          "barraAireado": 2,
+          "calidadEspuma": 1,
+          "textura": "Espuma inestable; aporta más sabor característico tropical que textura sedosa.",
+          "como": "Agita muy enérgicamente porque la grasa de coco tiende a estratificarse. Sirve inmediatamente tras verter.",
+          "ojo": "Es la que peor espuma y sostén ofrece. Si el cliente busca una bebida con abundante espuma sedosa, sugiérele amablemente avena."
+        }
+      ],
+      "marcasRecomendadas": [
+        {
+          "id": "orasi-avena",
+          "nombre": "Orasi Barista Avena",
+          "base": "Avena",
+          "uso": "Arte latte, latte y cappuccino",
+          "porQue": "Formulada específicamente para espumar con microburbujas brillantes; sabor suave y limpio que respeta el café de especialidad.",
+          "comoUsarla": "Agita el envase, texturiza a 55–60 °C, airea 2 a 3 s para latte y vierte inmediatamente tras retirar la lanceta."
+        },
+        {
+          "id": "nude-barista",
+          "nombre": "Nude Barista",
+          "base": "Avena",
+          "uso": "Arte latte y cafés de especialidad",
+          "porQue": "Diseñada por baristas para lograr gran elasticidad en el dibujo; cremosa, sin azúcar añadida ni soya.",
+          "comoUsarla": "Agita bien, calienta a 55–60 °C con poco aire. Vierte de inmediato para lograr contrastes nítidos en el vertido."
+        },
+        {
+          "id": "orasi-soya",
+          "nombre": "Orasi Barista Soya",
+          "base": "Soya",
+          "uso": "Arte latte y cappuccino tradicional",
+          "porQue": "Mayor concentración de proteína vegetal, logrando una espuma firme y consistente que sostiene figuras complejas.",
+          "comoUsarla": "Airea muy poco y al comienzo; mantén temperatura estricta bajo 60 °C para evitar cortes por choque térmico."
+        },
+        {
+          "id": "orasi-almendra",
+          "nombre": "Orasi Barista Almendra",
+          "base": "Almendra",
+          "uso": "Arte latte con técnica precisa",
+          "porQue": "Es de las pocas versiones de almendra que permite arte latte gracias a estabilizantes naturales que cohesionan la espuma liviana.",
+          "comoUsarla": "Airea 1 a 2 s, integra con remolino enérgico hasta lograr brillo y vierte sin esperar. Empieza con figuras simples como el corazón."
+        }
+      ],
+      "consejosArteLatte": [
+        "Agita el envase antes de cada uso sin excepción.",
+        "Una vez abierta, mantenla refrigerada, úsala dentro del plazo del envase y anota con plumón la fecha de apertura.",
+        "Usa pitcher exclusivo para vegetales, evitando contaminación cruzada con leche de vaca para clientes con alergias alimentarias.",
+        "Con almendra sí se puede dibujar, pero cuesta un poco más: menos aire, verter rápido y optar por figuras sencillas.",
+        "Si un cliente pide coco, avísale con simpatía que la espuma es más liviana y el dibujo puede no quedar tan definido."
+      ],
+      "problemasSoluciones": [
+        {
+          "problema": "Burbujas grandes en la superficie",
+          "solucion": "La punta quedó muy afuera o aireaste tarde cuando la leche ya estaba caliente. Airea solo al comienzo con 'chss' sutil."
+        },
+        {
+          "problema": "Leche plana y líquida, sin espuma",
+          "solucion": "La lanceta estuvo muy hundida desde el inicio y no incorporó aire. Empieza con la punta justo en la superficie."
+        },
+        {
+          "problema": "Chillido agudo y penetrante durante el vaporizado",
+          "solucion": "La punta está demasiado profunda en el fondo del pitcher. Súbela suavemente hacia la superficie para generar remolino."
+        },
+        {
+          "problema": "Salpica leche fuera del pitcher",
+          "solucion": "La punta salió por completo de la leche o abriste el vapor antes de tiempo. Mantén la punta siempre en contacto con la leche."
+        },
+        {
+          "problema": "Leche vegetal cortada o pastosa con grumos",
+          "solucion": "Se calentó de más (sobre 60 °C) o el espresso era muy ácido. Controla estrictamente los 55–60 °C."
+        },
+        {
+          "problema": "Nunca recalientes leche ya vaporizada",
+          "solucion": "La leche recalentada pierde todas sus propiedades elásticas y adquiere mal sabor. Vaporiza solo el volumen que vas a servir."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "tex-q1",
+          "pregunta": "¿Cuál es la temperatura máxima recomendada para vaporizar leches vegetales?",
+          "opciones": ["40 a 45 °C", "55 a 60 °C", "70 a 75 °C", "Lo más caliente posible"],
+          "indiceCorrecto": 1,
+          "explicacion": "Entre 55 y 60 °C. Si pasas los 60 °C, las proteínas vegetales se desnaturalizan en exceso y la leche se corta o se pone pastosa."
+        },
+        {
+          "id": "tex-q2",
+          "pregunta": "¿Qué leche se debe airear menos tiempo que la entera porque la espuma crece muy rápido?",
+          "opciones": ["Leche descremada", "Leche sin lactosa", "Bebida de avena", "Leche entera"],
+          "indiceCorrecto": 0,
+          "explicacion": "La descremada tiene alta concentración de proteína disponible sin grasa que la frene, por lo que monta muy rápido."
+        },
+        {
+          "id": "tex-q3",
+          "pregunta": "Si un cliente te indica que es alérgico a la proteína de leche de vaca, ¿qué opción le ofreces?",
+          "opciones": [
+            "Leche sin lactosa",
+            "Leche descremada",
+            "Una bebida vegetal (avena, soya, almendra o coco)",
+            "Leche entera pero con poca espuma"
+          ],
+          "indiceCorrecto": 2,
+          "explicacion": "La leche sin lactosa sigue conteniendo proteína de vaca. Para personas alérgicas a la proteína láctea, la única opción segura es una bebida 100% vegetal."
+        },
+        {
+          "id": "tex-q4",
+          "pregunta": "Al vaporizar, el pitcher emite un chillido agudo y penetrante. ¿Qué está ocurriendo?",
+          "opciones": [
+            "La punta de la lanceta está demasiado al fondo del pitcher",
+            "El vaporizado está perfecto",
+            "Falta leche en el pitcher",
+            "La leche está vencida"
+          ],
+          "indiceCorrecto": 0,
+          "explicacion": "El chillido agudo indica que la lanceta está en el fondo sin airear; hay que subirla un poco para generar circulación."
+        },
+        {
+          "id": "tex-q5",
+          "pregunta": "¿Cuál es la mejor bebida vegetal para lograr arte latte brillante y sedoso?",
+          "opciones": ["Bebida de coco", "Bebida de almendra", "Bebida de avena barista", "Ninguna vegetal permite dibujar"],
+          "indiceCorrecto": 2,
+          "explicacion": "La bebida de avena barista (como Orasi o Nude) ofrece la mejor cremosidad y elasticidad similar a la leche entera."
+        },
+        {
+          "id": "tex-q6",
+          "pregunta": "¿Qué versión de leche vegetal se debe usar obligatoriamente en la barra para arte latte?",
+          "opciones": [
+            "La versión tradicional normal de supermercado",
+            "La versión Barista, como Orasi Barista o Nude Barista",
+            "Cualquier versión da el mismo resultado",
+            "La versión Light descremada"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "Solo las versiones Barista contienen los estabilizantes e ingredientes calibrados para retener microespuma elástica."
+        }
+      ]
+    },
+    {
+      "id": "calibracion-espresso",
+      "orden": 4,
+      "tipo": "calibracion",
+      "titulo": "Calibración del espresso",
+      "descripcionCorta": "Cómo ajustar la molienda para que el espresso quede equilibrado, qué hacer según el sabor y cuándo calibrar durante el día.",
+      "parametros": {
+        "dosisGramos": 18,
+        "rendimientoGramos": 21,
+        "tiempoSegundos": 25,
+        "ratio": "1:1,17 (rango de tiempo aceptable: 23 a 28 s)",
+        "notaDiferencia": "18 g molido en portafiltro | 21 g líquido en taza | 25 s de extracción."
+      },
+      "introduccionDestacada": "Espresso equilibrado: dulce, con acidez agradable que no pica, amargor suave al final y cuerpo redondo; ningún sabor tapa a los otros y el retrogusto permanece un rato agradable después de tragar.",
+      "reglasOro": [
+        "Cambia una sola cosa a la vez: la molienda es la perilla principal de ajuste; la dosis (18 g) y el rendimiento (21 g) se mantienen siempre fijos.",
+        "Más fino = extracción más lenta y mayor extracción. Más grueso = extracción más rápida y menor extracción.",
+        "Después de mover el molino, purga siempre 2 a 3 gramos antes de preparar la taza de prueba.",
+        "El cronómetro orienta y ayuda, pero el sabor en boca es el que manda siempre."
+      ],
+      "motivosRecalibracion": [
+        "Al abrir una bolsa o lote nuevo de café tostado.",
+        "Cuando cambia bruscamente el clima en Santiago (calor intenso o días de lluvia/humedad).",
+        "Si se limpió o desarmó la tolva o muelas del molino.",
+        "Si un cliente reclama justificadamente por acidez punzante o sabor a quemado."
+      ],
+      "horariosCalibracion": [
+        { "id": "apertura", "nombre": "Apertura", "hora": "08:30" },
+        { "id": "mediodia", "nombre": "Mediodía", "hora": "12:30" },
+        { "id": "tarde", "nombre": "Tarde", "hora": "16:30" }
+      ],
+      "sintomasCalibracion": [
+        {
+          "id": "agrio",
+          "sintoma": "Agrio o muy ácido",
+          "sabor": "Ácido punzante que pica los lados de la lengua, salado, acuoso y de final muy corto.",
+          "tiempoAprox": "Menos de 22 s",
+          "posicionGrafico": 15,
+          "ajuste": "MOLER MÁS FINO",
+          "aQueSabe": "Ácido que pica, a veces con toque salado, aguado y final corto que desaparece al instante.",
+          "queSeVe": "Sale en menos de 22 segundos, chorro rápido y claro, crema delgada y pálida.",
+          "porQuePasa": "Sub-extracción: el agua pasa demasiado rápido entre las partículas gruesas y solo alcanza a disolver los primeros compuestos ácidos.",
+          "queHacer": "Afina la molienda un punto en el molino, purga 2 gramos de café y vuelve a extraer una prueba."
+        },
+        {
+          "id": "amargo",
+          "sintoma": "Amargo o quemado",
+          "sabor": "Amargor áspero y seco, sabor a ceniza, madera quemada o carbón, sensación astringente.",
+          "tiempoAprox": "Más de 28 s",
+          "posicionGrafico": 85,
+          "ajuste": "MOLER MÁS GRUESO",
+          "aQueSabe": "Amargor fuerte, sabor a ceniza o tostado excesivo; deja la boca seca como té cargado.",
+          "queSeVe": "Extracción de más de 28 segundos, goteo lento y forzado, crema oscura con manchas negras.",
+          "porQuePasa": "Sobre-extracción: el agua estuvo demasiado tiempo en contacto con el café y arrastró compuestos amargos y astringentes indeseados.",
+          "queHacer": "Engrosa la molienda un punto, purga el molino y realiza una nueva extracción de prueba."
+        },
+        {
+          "id": "canalizacion",
+          "sintoma": "Agrio y amargo a la vez",
+          "sabor": "Confuso: puntas ácidas desagradables combinadas con sequedad amarga al fondo.",
+          "tiempoAprox": "Variable / chorro dispar",
+          "posicionGrafico": 50,
+          "ajuste": "NO MUEVAS EL MOLINO: REVISA LA TÉCNICA",
+          "aQueSabe": "Sabores mezclados e inconexos; no se siente redondez en el paladar.",
+          "queSeVe": "Chorro disparejo que sale inclinado o escupiendo chorritos; hoyos visibles en la pastilla al retirar el portafiltro.",
+          "porQuePasa": "Canalización: el agua encontró caminos de menor resistencia por distribución deficiente o compactado inclinado.",
+          "queHacer": "Revisa tu técnica de distribución uniforme, compacta 100% nivelado con canasto limpio y seco, asegurando los 18 g exactos. Repite la extracción."
+        },
+        {
+          "id": "aguado",
+          "sintoma": "Aguado pero el tiempo está bien",
+          "sabor": "Liviano, débil, sin cuerpo ni presencia en boca, aunque el cronómetro marque 25 s.",
+          "tiempoAprox": "24–26 s",
+          "posicionGrafico": 40,
+          "ajuste": "REVISA DOSIS Y RENDIMIENTO",
+          "aQueSabe": "Liviano, acuoso, sin el cuerpo untuoso característico del espresso.",
+          "queSeVe": "El tiempo está en rango pero cayeron más de 21 g en taza o la dosis en portafiltro fue menor a 18 g.",
+          "porQuePasa": "Relación de agua/café desbalanceada: hay más agua que los 21 g requeridos o menos café del molido estipulado.",
+          "queHacer": "Pesa rigurosamente los 18 g de dosis y corta el flujo exactamente en 21 g con la balanza. Si persiste, afina apenas medio punto."
+        },
+        {
+          "id": "plano",
+          "sintoma": "Plano, sin aroma ni dulzor",
+          "sabor": "Café insípido, no sabe a nada en particular, ausencia de notas florales o achocolatadas.",
+          "tiempoAprox": "23–27 s",
+          "posicionGrafico": 60,
+          "ajuste": "REVISA EL CAFÉ Y LA TOLVA",
+          "aQueSabe": "Plano, sin notas aromáticas ni dulzor; gusto apagado.",
+          "queSeVe": "Poca formación de crema, casi no despide aroma al salir del grupo.",
+          "porQuePasa": "Café viejo, oxidado por dejar la bolsa abierta o por mantener granos en la tolva de un día para otro.",
+          "queHacer": "Revisa la fecha de tueste (ideal 10 a 45 días), no llenes la tolva con más café del que vas a usar en el turno y cierra bien la bolsa con válvula."
+        },
+        {
+          "id": "equilibrado",
+          "sintoma": "Equilibrado y dulce",
+          "sabor": "Dulce, acidez jugosa y brillante, amargor suave agradable al tragar y cuerpo sedoso.",
+          "tiempoAprox": "23 a 28 s (ideal 25 s)",
+          "posicionGrafico": 50,
+          "ajuste": "NO CAMBIES NADA: ¡CALIBRACIÓN PERFECTA!",
+          "aQueSabe": "Dulce, armónico, notas claras a caramelo y chocolate con acidez limpia que acompaña.",
+          "queSeVe": "Chorro parejo como cola de ratón dorada, 21 g en 25 s con crema avellana uniforme y elástica.",
+          "porQuePasa": "Molienda y técnica en perfecta armonía con el punto de tueste actual.",
+          "queHacer": "¡Felicitaciones! Registra la calibración del turno en la aplicación y atiende con toda confianza."
+        }
+      ],
+      "pasos": [
+        {
+          "id": "cal-p1",
+          "orden": 1,
+          "titulo": "Purgar el molino",
+          "descripcion": "Acciona el molino y muele unos 2 a 3 gramos de café para botar residuos de café molido retenido en la cámara.",
+          "consejo": "El café retenido en las muelas ya se oxidó; botar ese par de gramos garantiza que la calibración se haga con café fresco."
+        },
+        {
+          "id": "cal-p2",
+          "orden": 2,
+          "titulo": "Pesar 18 g exactos, distribuir y compactar",
+          "descripcion": "Pesa 18 g de café molido en el portafiltro, distribuye uniformemente y compacta con presión nivelada.",
+          "consejo": "Si la pastilla queda inclinada aunque sea un milímetro, el agua fugará por el lado más bajo (canalización)."
+        },
+        {
+          "id": "cal-p3",
+          "orden": 3,
+          "titulo": "Extraer sobre la balanza hasta 21 g",
+          "descripcion": "Purga el grupo 2 segundos, inserta el portafiltro, coloca la taza sobre la balanza en cero y presiona el botón.",
+          "consejo": "Cuenta el tiempo desde que presionas el botón. Corta la extracción cuando la balanza marque exactamente 21 g."
+        },
+        {
+          "id": "cal-p4",
+          "orden": 4,
+          "titulo": "Anotar el tiempo y mirar el chorro",
+          "descripcion": "Observa el flujo del líquido: debe caer continuo y elástico como 'cola de ratón', color avellana brillante.",
+          "consejo": "El tiempo óptimo son 25 segundos (rango aceptable de 23 a 28 s)."
+        },
+        {
+          "id": "cal-p5",
+          "orden": 5,
+          "titulo": "Probar el espresso solo y diagnosticar",
+          "descripcion": "Revuelve la taza con una cucharita de adelante hacia atrás para homogeneizar la crema y el cuerpo antes de beber.",
+          "consejo": "Pruébalo siempre solo, jamás con azúcar ni leche. Consulta el diagnóstico de sabor para determinar si afinar o engrosar.",
+          "mostrarDiagnostico": true
+        },
+        {
+          "id": "cal-p6",
+          "orden": 6,
+          "titulo": "Ajustar un punto y repetir",
+          "descripcion": "Si no está equilibrado, ajusta un solo punto el molino en la dirección correcta, purga 2 g y repite la extracción.",
+          "consejo": "Si tras 3 o 4 pruebas no logras balancearlo, avísale al encargado de barra para revisar las muelas o la temperatura de la máquina."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "cal-q1",
+          "pregunta": "La extracción salió en 18 segundos y el espresso sabe punzante, agrio y aguado. ¿Qué ajuste debes hacer?",
+          "opciones": [
+            "Engrosar la molienda",
+            "Afinar la molienda (moler más fino)",
+            "Agregar más leche a la taza",
+            "Subir la dosis a 25 gramos"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "Salió muy rápido (18 s) y sub-extraído (agrio): debes afinar la molienda para que oponga más resistencia al agua."
+        },
+        {
+          "id": "cal-q2",
+          "pregunta": "La extracción tardó 34 segundos, sale por goteo oscuro y sabe intensamente amargo y seco. ¿Qué haces?",
+          "opciones": [
+            "Afinar la molienda",
+            "Engrosar la molienda (moler más grueso)",
+            "Dejarlo así porque el café debe ser amargo",
+            "Cortar la extracción a los 15 gramos"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "Tardó demasiado (34 s) y está sobre-extraído (amargo seco): hay que engrosar la molienda para que fluya más ágilmente."
+        },
+        {
+          "id": "cal-q3",
+          "pregunta": "El espresso sabe agrio y amargo al mismo tiempo, y el chorro salió torcido por un solo lado. ¿Cuál es la causa?",
+          "opciones": [
+            "Mala distribución y compactado inclinado (canalización)",
+            "La temperatura de la leche estaba baja",
+            "El tamaño de la taza era incorrecto",
+            "La marca del café no es buena"
+          ],
+          "indiceCorrecto": 0,
+          "explicacion": "Es canalización: el agua perforó la pastilla por compactado desparejo, extrayendo partes de más y partes de menos."
+        },
+        {
+          "id": "cal-q4",
+          "pregunta": "¿Qué se debe hacer inmediatamente después de mover el dial del molino para probar el nuevo punto?",
+          "opciones": [
+            "Servir de inmediato la taza al cliente",
+            "Purgar 2 a 3 gramos de café y luego extraer la prueba",
+            "Cambiar la dosis de 18 g a 22 g",
+            "No hacer nada y esperar 10 minutos"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "Siempre se purgan 2 a 3 gramos para limpiar los restos retenidos de la molienda anterior dentro de la cámara."
+        },
+        {
+          "id": "cal-q5",
+          "pregunta": "¿Cómo se prueba adecuadamente un espresso durante la calibración de barra?",
+          "opciones": [
+            "Con un chorrito de leche tibia",
+            "Solo, revuelto previamente con una cucharita de barra",
+            "Con media cucharadita de azúcar para evaluar dulzor",
+            "Tomando solo la crema superficial con cuchara"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "Se prueba solo, revolviendo bien con cuchara para integrar las capas de crema, cuerpo y acidez."
+        }
+      ]
+    },
+    {
+      "id": "protocolo-atencion",
+      "orden": 5,
+      "tipo": "protocolo",
+      "titulo": "Protocolo de atención al cliente",
+      "descripcionCorta": "Cómo atender en cada momento de la visita, con ejemplos claros de qué decir con calidez y hospitalidad chilena.",
+      "proposito": "Queremos que cada persona que entre se sienta como en casa: recibida con cariño, atendida con calma y con ganas de volver.",
+      "detallesDiferenciadores": [
+        "Tratar a cada cliente de forma cordial, empática y cercana, sin formalismos fríos.",
+        "Cuidar el ambiente de la cafetería: música suave a volumen conversacional, mesas impecables y excelente disposición.",
+        "Si entra una familia con niños o un adulto mayor, ofrecer ayuda de inmediato o acercar un vaso de agua fresca.",
+        "Sonreír con sinceridad: la mirada a los ojos al saludar transforma el día de quien entra.",
+        "Hacer cumplidos genuinos, por ejemplo: '¡Excelente elección de café para esta mañana!'."
+      ],
+      "pasos": [
+        {
+          "id": "pro-p1",
+          "orden": 1,
+          "titulo": "Al llegar",
+          "descripcion": "Saludar apenas cruce la puerta, mirarlo a los ojos y sonreír, incluso si estás en medio de la extracción de otro pedido.",
+          "fraseEjemplo": "¡Hola! ¿Cómo estás? Ya te atiendo."
+        },
+        {
+          "id": "pro-p2",
+          "orden": 2,
+          "titulo": "Al tomar el pedido",
+          "descripcion": "Tomarse el tiempo necesario sin apurar al cliente; conversar con simpatía y recomendar con paciencia si tiene dudas.",
+          "fraseEjemplo": "Si tienes alguna duda con la carta o los orígenes, me preguntas con toda confianza."
+        },
+        {
+          "id": "pro-p3",
+          "orden": 3,
+          "titulo": "Clientes habituales",
+          "descripcion": "Reconocer a los vecinos del barrio, recordar su nombre y lo que acostumbran pedir habitualmente.",
+          "fraseEjemplo": "¡Hola, Carmen! ¿Lo mismo de siempre, tu cappuccino con avena?"
+        },
+        {
+          "id": "pro-p4",
+          "orden": 4,
+          "titulo": "Mientras espera",
+          "descripcion": "Mantener contacto visual y avisar proactivamente si el pedido tomará un par de minutos adicionales por fila.",
+          "fraseEjemplo": "Carlos, en un momento te entrego tu cappuccino recién hecho."
+        },
+        {
+          "id": "pro-p5",
+          "orden": 5,
+          "titulo": "Al entregar el café",
+          "descripcion": "Entregar en la mano o en la mesa con el asa orientada hacia el cliente, nombrando claramente la bebida preparada.",
+          "fraseEjemplo": "Aquí está tu cappuccino con microespuma, que lo disfrutes mucho."
+        },
+        {
+          "id": "pro-p6",
+          "orden": 6,
+          "titulo": "Durante la visita",
+          "descripcion": "Pasar por las mesas con discreción sin interrumpir conversaciones para verificar si todo está a gusto.",
+          "fraseEjemplo": "¿Cómo estuvo todo? ¿Te traigo un vasito de agua o algo más?"
+        },
+        {
+          "id": "pro-p7",
+          "orden": 7,
+          "titulo": "Si algo sale mal",
+          "descripcion": "Escuchar con absoluta paciencia y humildad, disculparse de corazón sin dar excusas técnicas y solucionar al tiro.",
+          "fraseEjemplo": "Mil disculpas por eso. Te preparo otro café nuevo al tiro, déjamelo a mí."
+        },
+        {
+          "id": "pro-p8",
+          "orden": 8,
+          "titulo": "Al despedir",
+          "descripcion": "Agradecer la visita con entusiasmo genuino e invitar a volver, tal como cuando despides a un amigo en tu propia casa.",
+          "fraseEjemplo": "¡Muchas gracias por venir hoy! Que tengan un muy lindo día."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "pro-q1",
+          "pregunta": "Entra un cliente a la cafetería mientras estás concentrado preparando otro pedido en la máquina. ¿Qué debes hacer?",
+          "opciones": [
+            "Terminar todo el pedido con calma y solo después levantar la vista para saludar",
+            "Saludar de inmediato, mirarlo a los ojos y avisar amablemente que ya lo atiendes",
+            "Esperar en silencio a que el cliente hable primero",
+            "Hacerle señas con la mano a otro compañero para que se encargue"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "Un saludo inmediato y contacto visual hace que el cliente se sienta recibido y espere con gusto."
+        },
+        {
+          "id": "pro-q2",
+          "pregunta": "Un cliente se acerca a la barra diciendo que su café está tibio o frío. ¿Cuál es la respuesta correcta?",
+          "opciones": [
+            "Explicarle técnicamente que la leche se vaporiza a 60 °C y que salió bien",
+            "Escuchar con paciencia, disculparse con calidez y preparar uno nuevo al tiro",
+            "Ofrecer calentarlo unos segundos en el microondas de pastelería",
+            "Pedirle que espere al dueño de la cafetería para que resuelva"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "En Ori Café no discutimos con el cliente: escuchamos, pedimos disculpas y preparamos una nueva taza impecable al tiro."
+        },
+        {
+          "id": "pro-q3",
+          "pregunta": "¿Cómo se atiende preferentemente a los clientes habituales que visitan la cafetería seguido?",
+          "opciones": [
+            "Atenderlos rápido y en silencio para no distraer la barra",
+            "Recordar su nombre y su pedido habitual con cordialidad cercana",
+            "Cobrarles un precio menor sin avisar",
+            "Hacerlos pasar antes en la fila que los demás clientes"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "Recordar el nombre y gustos del cliente crea lealtad y el sentido de comunidad de cafetería de barrio."
+        },
+        {
+          "id": "pro-q4",
+          "pregunta": "Entra una persona de la tercera edad o alguien con movilidad reducida a Ori Café. ¿Qué gesto de hospitalidad realizamos?",
+          "opciones": [
+            "Ofrecer ayuda de inmediato para ubicar una mesa cómoda o acercarle un vaso de agua fresca",
+            "Recomendarle de inmediato el café más caro de la carta",
+            "Pedirle que espere de pie en la fila general",
+            "No hacer nada especial para no incomodarlo"
+          ],
+          "indiceCorrecto": 0,
+          "explicacion": "La hospitalidad proactiva, como ofrecer una mesa accesible o agua fresca, es parte del sello cálido de Ori Café."
+        }
+      ]
+    },
+    {
+      "id": "quimica-leche",
+      "orden": 6,
+      "tipo": "lectura",
+      "titulo": "Química del texturizado de leche",
+      "descripcionCorta": "Qué pasa dentro de la leche cuando la vaporizamos y cómo cambia la física y química según el tipo de leche.",
+      "pasos": [
+        {
+          "id": "qui-p1",
+          "orden": 1,
+          "titulo": "Desnaturalización de proteínas",
+          "descripcion": "Entre 55 y 65 °C, las proteínas del suero lácteo (principalmente β-lactoglobulina y α-lactoalbúmina) comienzan a desplegarse y desnaturalizarse.",
+          "consejo": "Estas proteínas forman una película elástica que recubre las burbujas de aire inyectadas, estabilizando la microespuma. Las micelas de caseína, por su parte, estabilizan la emulsión y resisten mejor las temperaturas."
+        },
+        {
+          "id": "qui-p2",
+          "orden": 2,
+          "titulo": "Emulsificación de la materia grasa",
+          "descripcion": "Los glóbulos de grasa láctea (triglicéridos) se emulsionan con el calor y la agitación del remolino de vapor.",
+          "consejo": "La grasa aporta untuosidad, viscosidad y cuerpo; suaviza el paso de la espuma en el paladar y genera el brillo satinado de la leche entera."
+        },
+        {
+          "id": "qui-p3",
+          "orden": 3,
+          "titulo": "Dulzor térmico de la lactosa",
+          "descripcion": "Con el calor moderado (60–65 °C), las papilas gustativas perciben el azúcar natural de la leche (lactosa) con mayor intensidad.",
+          "consejo": "Por sobre los 70 °C, las proteínas se descomponen liberando sulfuros, la leche se degrada y pierde todo su dulzor, adquiriendo sabor a cocido o huevo."
+        },
+        {
+          "id": "qui-p4",
+          "orden": 4,
+          "titulo": "Factores que afectan el texturizado",
+          "descripcion": "1) Contenido de proteína: el factor más determinante (mínimo 3% para espumas duraderas). 2) Tipo y estado de la grasa: la grasa vacuna emulsiona suave, mientras aceites vegetales requieren emulsificantes. 3) Rango térmico: 60–65 °C para vaca y 55–60 °C para vegetales.",
+          "consejo": "Un buen barista conoce la composición de su leche para adaptar el tiempo de aireado con precisión científica."
+        },
+        {
+          "id": "qui-p5",
+          "orden": 5,
+          "titulo": "Tabla comparativa según el tipo de leche",
+          "descripcion": "Revisa a continuación el comportamiento técnico detallado de cada alternativa disponible en la barra."
+        }
+      ],
+      "filasComparativa": [
+        {
+          "tipo": "Entera",
+          "proteinas": "Caseína y suero (β-lactoglobulina)",
+          "grasa": "~3,5 %",
+          "estabilidad": "Excelente",
+          "comentario": "Densa, brillante y sedosa. El estándar dorado de la cafetería de especialidad."
+        },
+        {
+          "tipo": "Semidescremada",
+          "proteinas": "Menos proteínas solubles",
+          "grasa": "~1,5 %",
+          "estabilidad": "Buena",
+          "comentario": "Ligera, genera espuma correcta pero con menos cuerpo y persistencia en boca."
+        },
+        {
+          "tipo": "Descremada",
+          "proteinas": "Alta en proteínas, sin grasa",
+          "grasa": "<0,5 %",
+          "estabilidad": "Muy estable",
+          "comentario": "Seca, menos cremosa, sabor neutro; monta muy rápido por ausencia de lípidos."
+        },
+        {
+          "tipo": "Sin lactosa",
+          "proteinas": "Proteínas idénticas a entera",
+          "grasa": "Variable (~3,0 %)",
+          "estabilidad": "Buena",
+          "comentario": "Carameliza a menor temperatura (55–60 °C) por la presencia de glucosa libre."
+        },
+        {
+          "tipo": "Soya",
+          "proteinas": "Glicinina y β-conglicinina",
+          "grasa": "~2–4 %",
+          "estabilidad": "Buena a regular",
+          "comentario": "Excelente en versión Barista; muy sensible al choque térmico y acidez extrema."
+        },
+        {
+          "tipo": "Avena",
+          "proteinas": "Beta-glucanos y almidón",
+          "grasa": "~1,5–3 %",
+          "estabilidad": "Estable y sedosa",
+          "comentario": "Dulzor natural agradable; es la alternativa vegetal más cercana a la leche entera."
+        },
+        {
+          "tipo": "Almendra",
+          "proteinas": "Proteína muy baja (~0,5 %)",
+          "grasa": "~2 %",
+          "estabilidad": "Débil",
+          "comentario": "Espuma liviana; requiere emulsificantes especiales (fórmula Barista) para no colapsar."
+        },
+        {
+          "tipo": "Coco",
+          "proteinas": "Muy baja en proteína",
+          "grasa": "Alta (saturada)",
+          "estabilidad": "Mala",
+          "comentario": "Aporta más aroma y sabor que sostén mecánico; la espuma decanta con rapidez."
+        }
+      ],
+      "quiz": [
+        {
+          "id": "qui-q1",
+          "pregunta": "¿Qué función cumplen las proteínas del suero lácteo (como la β-lactoglobulina) al texturizar?",
+          "opciones": [
+            "Endulzan la leche",
+            "Se desnaturalizan, recubren las burbujas de aire y estabilizan la espuma",
+            "Bajan la temperatura de vaporizado",
+            "Disuelven la grasa del espresso"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "Al desplegarse con el calor, las proteínas forman una matriz elástica que atrapa las burbujas de aire."
+        },
+        {
+          "id": "qui-q2",
+          "pregunta": "¿Cuál es el componente químico y nutricional más importante para lograr una espuma estable y elástica?",
+          "opciones": [
+            "El color de la leche",
+            "El contenido de proteína (al menos 3 %)",
+            "La marca metálica del pitcher",
+            "El porcentaje de azúcar añadido"
+          ],
+          "indiceCorrecto": 1,
+          "explicacion": "La proteína es el elemento estructural que sostiene mecánicamente la microespuma."
+        },
+        {
+          "id": "qui-q3",
+          "pregunta": "¿Cuál es la bebida vegetal con estructura y comportamiento físico-químico más similar a la leche entera?",
+          "opciones": ["Bebida de coco", "Bebida de almendra", "Bebida de avena barista", "Ninguna"],
+          "indiceCorrecto": 2,
+          "explicacion": "Los beta-glucanos y el equilibrio de lípidos de la avena barista ofrecen la viscosidad y emulsión más parecida a la grasa láctea."
+        },
+        {
+          "id": "qui-q4",
+          "pregunta": "¿Por qué la leche descremada produce una espuma con tendencia a quedar seca y tipo merengue?",
+          "opciones": [
+            "Porque tiene alta proporción de proteínas pero casi nada de grasa que la suavice",
+            "Porque contiene demasiada lactosa libre",
+            "Porque se calienta más lento que la entera",
+            "Porque no contiene ninguna proteína"
+          ],
+          "indiceCorrecto": 0,
+          "explicacion": "La ausencia de lípidos permite que las proteínas monten sin resistencia, formando burbujas secas y rígidas."
+        }
+      ]
+    }
+  ]
+}

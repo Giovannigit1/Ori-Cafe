@@ -1,0 +1,117 @@
+@import './variables.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+body {
+  font-family: var(--fuente-texto);
+  line-height: 1.55;
+  background-color: var(--bg-principal);
+  color: var(--texto-principal);
+  min-height: 100vh;
+  padding-bottom: 70px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografía Editorial */
+h1, h2, h3, h4, .fuente-titulo {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--texto-principal);
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 1.85rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+}
+
+h3 {
+  font-size: 1.12rem;
+}
+
+p {
+  color: var(--texto-secundario);
+  font-size: 0.98rem;
+}
+
+.mono {
+  font-family: var(--fuente-mono);
+  font-feature-settings: 'tnum' on, 'zero' on;
+}
+
+.editorial {
+  font-family: var(--fuente-editorial);
+}
+
+a {
+  color: var(--acento);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transicion-rapida);
+}
+
+a:hover {
+  color: var(--acento-hover);
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  background: none;
+  touch-action: manipulation;
+}
+
+/* Foco accesible y sobrio */
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Contenedor principal responsive editorial */
+.app-contenedor {
+  width: 100%;
+  max-width: var(--ancho-max-contenedor);
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+@media (min-width: 600px) {
+  .app-contenedor {
+    padding: 0 24px;
+  }
+}
+
+/* Respeta preferencias de reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

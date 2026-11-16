@@ -1,0 +1,934 @@
+/* ══════════════════════════════════════════════
+   TARJETAS Y FICHAS EDITORIALES DE LABORATORIO
+   ══════════════════════════════════════════════ */
+.tarjeta {
+  background-color: var(--bg-superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-tarjeta);
+  padding: 18px;
+  box-shadow: var(--sombra-sm);
+  transition: border-color var(--transicion-rapida), box-shadow var(--transicion-rapida);
+}
+
+.tarjeta-destacada {
+  background-color: var(--bg-tarjeta-subtil);
+  border: 1px solid var(--acento-borde);
+}
+
+.tarjeta-aviso {
+  background-color: var(--ambar-claro);
+  border: 1px solid var(--ambar-borde);
+}
+
+.tarjeta-verde {
+  background-color: var(--verde-claro);
+  border: 1px solid var(--verde-borde);
+}
+
+.tarjeta-roja {
+  background-color: var(--rojo-claro);
+  border: 1px solid var(--rojo-borde);
+}
+
+/* Ficha Técnica de Laboratorio de Café */
+.ficha-laboratorio {
+  border: 1px solid var(--borde-fuerte);
+  border-radius: var(--radio-tarjeta);
+  background-color: var(--bg-superficie);
+  overflow: hidden;
+}
+
+.ficha-laboratorio-header {
+  padding: 10px 16px;
+  background-color: var(--bg-superficie-suave);
+  border-bottom: 1px solid var(--borde);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ficha-laboratorio-body {
+  padding: 16px;
+}
+
+/* ══════════════════════════════════════════════
+   BOTONES ERGONÓMICOS REFINADOS
+   ══════════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--altura-min-tactil);
+  padding: 10px 22px;
+  border-radius: var(--radio-pildora);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.96rem;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-align: center;
+  user-select: none;
+  transition: all var(--transicion-rapida);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primario {
+  background-color: var(--acento);
+  color: #FFFFFF;
+  border: 1px solid var(--acento-fuerte);
+  box-shadow: 0 2px 6px rgba(180, 101, 34, 0.2);
+}
+
+.btn-primario:hover {
+  background-color: var(--acento-hover);
+  color: #FFFFFF;
+}
+
+.btn-secundario {
+  background-color: var(--bg-superficie);
+  color: var(--texto-principal);
+  border: 1px solid var(--borde-fuerte);
+}
+
+.btn-secundario:hover {
+  background-color: var(--bg-superficie-suave);
+  border-color: var(--texto-suave);
+}
+
+.btn-verde {
+  background-color: var(--verde);
+  color: #FFFFFF;
+  border: 1px solid var(--verde-hover);
+}
+
+.btn-verde:hover {
+  background-color: var(--verde-hover);
+}
+
+.btn-peligro {
+  background-color: var(--rojo);
+  color: #FFFFFF;
+  border: 1px solid var(--rojo-hover);
+}
+
+.btn-peligro:hover {
+  background-color: var(--rojo-hover);
+}
+
+.btn-sm {
+  min-height: 36px;
+  padding: 6px 14px;
+  font-size: 0.84rem;
+}
+
+.btn-lg {
+  min-height: 50px;
+  padding: 12px 24px;
+  font-size: 1.05rem;
+}
+
+/* ══════════════════════════════════════════════
+   BADGES Y CHIPS CON ESTILO MONOESPACIADO TÉCNICO
+   ══════════════════════════════════════════════ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--fuente-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 9px;
+  border-radius: 4px;
+  border: 1px solid var(--borde);
+  background-color: var(--bg-superficie-suave);
+  color: var(--texto-secundario);
+}
+
+.badge-acento {
+  background-color: var(--acento-claro);
+  color: var(--acento-fuerte);
+  border-color: var(--acento-borde);
+}
+
+.badge-verde {
+  background-color: var(--verde-claro);
+  color: var(--verde);
+  border-color: var(--verde-borde);
+}
+
+.badge-rojo {
+  background-color: var(--rojo-claro);
+  color: var(--rojo);
+  border-color: var(--rojo-borde);
+}
+
+.badge-gris {
+  background-color: var(--bg-superficie-suave);
+  color: var(--texto-suave);
+  border-color: var(--borde);
+}
+
+/* Chips de Parámetros Técnicos (Balanza, Molino, Tiempo) */
+.chips-parametros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+.chip-parametro {
+  background-color: var(--bg-superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+  padding: 6px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-family: var(--fuente-mono);
+}
+
+.chip-parametro strong {
+  color: var(--texto-principal);
+  font-weight: 700;
+}
+
+/* ══════════════════════════════════════════════
+   SECCIÓN CRÍTICA DE ESPRESSO: 18g IN vs 21g OUT
+   ══════════════════════════════════════════════ */
+.especificacion-espresso-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.bloque-metrica-espresso {
+  background-color: var(--bg-superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bloque-metrica-espresso.dosis-in {
+  border-left: 3px solid var(--acento);
+}
+
+.bloque-metrica-espresso.rendimiento-out {
+  border-left: 3px solid var(--verde);
+}
+
+.bloque-metrica-espresso.tiempo-ext {
+  border-left: 3px solid var(--texto-principal);
+}
+
+.metrica-tag-tecnica {
+  font-family: var(--fuente-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+}
+
+.metrica-cifra-grande {
+  font-family: var(--fuente-mono);
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 6px 0 4px 0;
+  color: var(--texto-principal);
+}
+
+.metrica-explicacion {
+  font-size: 0.82rem;
+  color: var(--texto-secundario);
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════════
+   CABECERA ARTESANAL DE LA CAFETERÍA
+   ══════════════════════════════════════════════ */
+.cabecera-app {
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--borde);
+  margin-bottom: 22px;
+}
+
+.logo-ori {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-ori h1 {
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.logo-ori .sub-logo {
+  font-family: var(--fuente-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--acento);
+  display: block;
+}
+
+/* ══════════════════════════════════════════════
+   SEGUIMIENTO DE PROGRESO DE CAFÉ (BATCH TRACKER)
+   ══════════════════════════════════════════════ */
+.granos-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 14px 0 6px 0;
+  padding: 10px;
+  background-color: var(--bg-superficie-suave);
+  border-radius: var(--radio-sm);
+  border: 1px solid var(--borde);
+}
+
+.grano-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.grano-svg {
+  width: 28px;
+  height: 28px;
+  transition: transform var(--transicion-rapida);
+}
+
+.grano-svg.completado {
+  transform: scale(1.05);
+}
+
+/* ══════════════════════════════════════════════
+   RECORDATORIO DE CALIBRACIÓN DIARIA
+   ══════════════════════════════════════════════ */
+.recordatorio-alerta {
+  padding: 16px;
+  border-radius: var(--radio-tarjeta);
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recordatorio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recordatorio-chips-horario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip-horario {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: var(--fuente-mono);
+  font-size: 0.8rem;
+  border: 1px solid var(--borde);
+  background-color: var(--bg-superficie);
+}
+
+.chip-horario.realizado {
+  background-color: var(--verde-claro);
+  border-color: var(--verde-borde);
+  color: var(--verde);
+  font-weight: 700;
+}
+
+.chip-horario.pendiente-urgente {
+  background-color: var(--ambar-claro);
+  border-color: var(--ambar-borde);
+  color: var(--texto-principal);
+  font-weight: 700;
+}
+
+/* ══════════════════════════════════════════════
+   LISTA EDITORIAL DE MÓDULOS EN INICIO
+   ══════════════════════════════════════════════ */
+.lista-modulos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.tarjeta-modulo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid var(--borde);
+  background-color: var(--bg-superficie);
+  padding: 18px;
+  border-radius: var(--radio-tarjeta);
+}
+
+.tarjeta-modulo:hover {
+  border-color: var(--acento);
+  box-shadow: var(--sombra-md);
+}
+
+.modulo-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/* ══════════════════════════════════════════════
+   PRACTICA GUIADA: TAZA ANALÓGICA Y PASOS
+   ══════════════════════════════════════════════ */
+.practica-pantalla {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 96px;
+}
+
+.practica-progreso-barra {
+  width: 100%;
+  height: 6px;
+  background-color: var(--bg-superficie-suave);
+  border-radius: var(--radio-pildora);
+  overflow: hidden;
+  border: 1px solid var(--borde);
+}
+
+.practica-progreso-fill {
+  height: 100%;
+  background-color: var(--acento);
+  transition: width 0.3s ease;
+}
+
+.practica-header-paso {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.taza-circulo-contenedor {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--borde-fuerte);
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-superficie-suave);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taza-circulo-liquido {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #5A3515;
+  transition: height 0.4s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.taza-circulo-numero {
+  position: relative;
+  z-index: 2;
+  font-family: var(--fuente-mono);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
+.frase-protocolo-gigante {
+  font-family: var(--fuente-editorial);
+  font-size: 1.55rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--acento-fuerte);
+  background-color: var(--acento-claro);
+  border-left: 3px solid var(--acento);
+  padding: 18px 20px;
+  border-radius: 0 var(--radio-tarjeta) var(--radio-tarjeta) 0;
+  margin: 12px 0;
+  line-height: 1.35;
+}
+
+/* Barra inferior fija con efecto cristal (blur) */
+.barra-inferior-fija {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--borde);
+  padding: 14px 16px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.06);
+  z-index: 50;
+}
+
+@media (prefers-color-scheme: dark) {
+  .barra-inferior-fija {
+    background-color: rgba(19, 15, 13, 0.92);
+  }
+}
+
+.barra-inferior-inner {
+  max-width: var(--ancho-max-contenedor);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ══════════════════════════════════════════════
+   DIAGNÓSTICO SENSORIAL SCA (CALIBRACIÓN)
+   ══════════════════════════════════════════════ */
+.diagnostico-contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.barra-sabor-escala {
+  width: 100%;
+  height: 24px;
+  border-radius: var(--radio-pildora);
+  background: linear-gradient(to right, #B88235 0%, #3E6B34 50%, #4D3325 100%);
+  position: relative;
+  margin: 22px 0 10px 0;
+  border: 1px solid var(--borde-fuerte);
+}
+
+.marcador-sabor {
+  position: absolute;
+  top: -8px;
+  width: 40px;
+  height: 40px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 2px solid var(--texto-principal);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s cubic-bezier(0.2, 0, 0, 1);
+  font-family: var(--fuente-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--texto-principal);
+}
+
+.escala-etiquetas {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fuente-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--texto-suave);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.botones-sintomas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-sintoma {
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-sm);
+  padding: 10px 12px;
+  text-align: left;
+  background-color: var(--bg-superficie);
+  color: var(--texto-principal);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all var(--transicion-rapida);
+}
+
+.btn-sintoma.activo {
+  border-color: var(--acento);
+  background-color: var(--acento-claro);
+  color: var(--acento-fuerte);
+  font-weight: 700;
+}
+
+/* ══════════════════════════════════════════════
+   ILUSTRACIÓN PITCHER SVG Y FASES
+   ══════════════════════════════════════════════ */
+.fases-pitcher-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 16px 0;
+}
+
+@media (min-width: 600px) {
+  .fases-pitcher-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pitcher-svg-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: var(--bg-superficie-suave);
+  border-radius: var(--radio-sm);
+  margin-top: 10px;
+  border: 1px solid var(--borde);
+}
+
+/* Animaciones sutiles y respetuosas */
+@keyframes subirBurbuja {
+  0% { transform: translateY(6px); opacity: 0.2; }
+  50% { opacity: 0.9; }
+  100% { transform: translateY(-10px); opacity: 0; }
+}
+
+@keyframes girarRemolino {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.anim-burbuja-1 {
+  animation: subirBurbuja 1.6s infinite ease-in;
+}
+
+.anim-burbuja-2 {
+  animation: subirBurbuja 2s infinite ease-in 0.5s;
+}
+
+.anim-remolino {
+  transform-origin: center;
+  animation: girarRemolino 3.2s infinite linear;
+}
+
+/* ══════════════════════════════════════════════
+   TERMÓMETRO ANALÓGICO / GAUGE TÉCNICO
+   ══════════════════════════════════════════════ */
+.termometro-contenedor {
+  margin: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.termometro-graduaciones {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+  font-family: var(--fuente-mono);
+  font-size: 0.68rem;
+  color: var(--texto-suave);
+}
+
+.termometro-barra {
+  width: 100%;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid var(--borde-fuerte);
+  position: relative;
+}
+
+.termometro-zona {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fuente-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.04em;
+}
+
+.zona-fria {
+  background-color: #798696;
+}
+
+.zona-vegetal {
+  background-color: var(--verde);
+}
+
+.zona-vaca {
+  background-color: var(--acento);
+}
+
+.zona-quema {
+  background-color: var(--rojo);
+}
+
+/* ══════════════════════════════════════════════
+   SELECTOR Y FICHAS DE LECHE
+   ══════════════════════════════════════════════ */
+.tabs-leches {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: var(--radio-pildora);
+  font-weight: 600;
+  font-size: 0.92rem;
+  border: 1px solid var(--borde);
+  background-color: var(--bg-superficie);
+  color: var(--texto-secundario);
+  transition: all var(--transicion-rapida);
+}
+
+.tab-btn.activo {
+  background-color: var(--acento);
+  color: #FFFFFF;
+  border-color: var(--acento-fuerte);
+}
+
+.tab-btn.activo-vegetal {
+  background-color: var(--verde);
+  color: #FFFFFF;
+  border-color: var(--verde-hover);
+}
+
+/* Barra de nivel de aireado */
+.barra-aireado-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+.barra-aireado-track {
+  flex: 1;
+  height: 6px;
+  background-color: var(--bg-superficie-suave);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.barra-aireado-fill {
+  height: 100%;
+  background-color: var(--acento);
+  border-radius: 3px;
+}
+
+/* ══════════════════════════════════════════════
+   QUIZ EDITORIAL
+   ══════════════════════════════════════════════ */
+.quiz-pantalla {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quiz-opciones-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.btn-opcion-quiz {
+  width: 100%;
+  text-align: left;
+  padding: 14px 18px;
+  border-radius: var(--radio-tarjeta);
+  border: 1.5px solid var(--borde);
+  background-color: var(--bg-superficie);
+  color: var(--texto-principal);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  transition: all var(--transicion-rapida);
+}
+
+.btn-opcion-quiz:hover:not(:disabled) {
+  border-color: var(--acento);
+  background-color: var(--acento-claro);
+}
+
+.btn-opcion-quiz.correcta {
+  border-color: var(--verde);
+  background-color: var(--verde-claro);
+  color: var(--verde);
+  font-weight: 600;
+}
+
+.btn-opcion-quiz.incorrecta {
+  border-color: var(--rojo);
+  background-color: var(--rojo-claro);
+  color: var(--rojo);
+  font-weight: 600;
+}
+
+.opcion-indice-circulo {
+  min-width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--borde-fuerte);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--fuente-mono);
+  font-size: 0.78rem;
+  color: var(--texto-suave);
+}
+
+/* ══════════════════════════════════════════════
+   TABLA COMPARATIVA CON SCROLL SUAVE
+   ══════════════════════════════════════════════ */
+.tabla-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio-tarjeta);
+  background-color: var(--bg-superficie);
+}
+
+.tabla-comparativa {
+  width: 100%;
+  min-width: 580px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabla-comparativa th,
+.tabla-comparativa td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--borde);
+}
+
+.tabla-comparativa th {
+  background-color: var(--bg-superficie-suave);
+  font-family: var(--fuente-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--texto-secundario);
+}
+
+/* ══════════════════════════════════════════════
+   EDITOR DE CONTENIDO
+   ══════════════════════════════════════════════ */
+.editor-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 100px;
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo-grupo label {
+  font-family: var(--fuente-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.input-control,
+.textarea-control,
+.select-control {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: var(--radio-sm);
+  border: 1px solid var(--borde-fuerte);
+  background-color: var(--bg-superficie);
+  color: var(--texto-principal);
+  font-family: inherit;
+  font-size: 0.96rem;
+  transition: border-color var(--transicion-rapida);
+}
+
+.input-control:focus,
+.textarea-control:focus,
+.select-control:focus {
+  border-color: var(--acento);
+  outline: none;
+}
+
+.textarea-control {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ══════════════════════════════════════════════
+   TOAST DE NOTIFICACIONES ELEGANTE
+   ══════════════════════════════════════════════ */
+.toast-notificacion {
+  position: fixed;
+  bottom: 84px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--texto-principal);
+  color: var(--bg-principal);
+  padding: 10px 20px;
+  border-radius: var(--radio-pildora);
+  font-family: var(--fuente-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: var(--sombra-lg);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: aparecerToast 0.2s ease;
+}
+
+@keyframes aparecerToast {
+  from { opacity: 0; transform: translate(-50%, 8px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
